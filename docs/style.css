@@ -25,6 +25,9 @@ input:hover {
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+h1 {
+    text-align: center;
+}
 h2 {
     border-bottom: var(--color-text) 1px solid;
     margin-bottom: 1em;
@@ -72,6 +75,7 @@ body {
     border: 1px solid #ccc;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.369);
     background-color: var(--color-background-2);
+    overflow: hidden;
 }
 
 label {
@@ -83,4 +87,10 @@ label {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
+}
+@media screen and (max-width: 512px) {
+    .input, .output {
+        grid-template-columns: 1fr;
+    }
+    
 }
