@@ -14,8 +14,26 @@
     <a href="https://github.com/RainBWP/JS-MemoryCalculator" target="_blank">Repositorio Github</a>
     
     <div class="container">
+        <h2>Calculadora Rapida</h2>
+        <div class="input">
+            <label for="binary">Binario</label>
+            <input type="number" id="binary" name="binary" pattern="[01]+" inputmode="numeric">
+
+            <label for="decimal">Decimal</label>
+            <input type="number" id="decimal" name="decimal" pattern="[0-9]+" inputmode="numeric">
+        
+            <label for="hexadecimal">Hexadecimal</label>
+            <input type="text" id="hexadecimal" name="hexadecimal" pattern="[0-9a-fA-F]+" inputmode="numeric">
+        
+            <button onclick="clean_calculator()">Limpiar Datos</button>
+            <button onclick="get_calculator()">Calcular</button>
+        </div>
+        
+    </div>
+
+    <div class="container">
         <h2>Usando Direccion Hexadecimal</h2>
-        <form class="input">
+        <div class="input">
             <label for="virtual">Memoria Virtual</label>
             <input type="text" id="virtual" name="virtual" pattern="[0-9a-fA-F]+" required>
             
@@ -30,7 +48,7 @@
             
             <label for="printtype">Imprimir tipo de valor</label>
             <input type="checkbox" name="printtype" id="printtype" checked>
-        </form>
+        </div>
 
         <button onclick="calcular_hexa()">Calcular</button>
 
@@ -48,13 +66,70 @@
             <label for="des-pags-virtual">Desplazamiento de Memoria Virtual</label>
             <span id="des-pags-virtual"></span>
 
-            <label for="num-pags-physic">Numero de Paginas Fisica</label>
+            <label for="num-pags-physic">Numero de Marcos en Fisica</label>
             <span id="num-pags-physic"></span>
 
             <label for="des-pags-physic">Desplazamiento de Memoria Fisica</label>
             <span id="des-pags-physic"></span>
+
+            <label for="page-value-forVirtual">Numero de pagina que se hace referencia</label>
+            <span id="page-value-forVirtual"></span>
+
+            <label for="des-value-virtual">Valor del Desplazamiento en Virtual</label>
+            <span id="des-value-virtual"></span>
+
+            <label for="mar-value-physic">Valor del Marco en Memoria Fisica</label>
+            <span id="mar-value-physic"></span>
         </div>
         
+    </div>
+
+    <div class="container">
+        <h2>Calcular en base a una Direccion Binaria Virtual</h2>
+        <div action="" class="input">
+            <label for="binary_direcction_virtual">Direccion Virtual</label>
+            <input type="number" id="binary_direcction_virtual" name="binary_direcction_virtual" pattern="[01]+" inputmode="numeric" required>
+            
+            <label for="bits-page">Bits de Numero de Pagina</label>
+            <input type="number" id="bits-page" name="bits-page" min="0" inputmode="numeric" required>
+
+            <label for="size-page">Tamaño de Pagina</label>
+            <input type="number" id="size-page" name="size-page" min="0" inputmode="numeric" required>
+
+            <label for="marco-bits">Bits del Marco</label>
+            <input type="number" id="marco-bits" name="marco-bits" min="0" inputmode="numeric" required>
+        
+            <label for="printtype1">Imprimir tipo de valor</label>
+            <input type="checkbox" name="printtype1" id="printtype1" checked>
+        </div>
+        <button onclick="calcular_binario_direccion()">Calcular</button>
+        <div =>
+            <h2>Resultados</h2>
+            <div class="output">
+                <label for="page-table">Entradas en la Tabla de Paginas</label>
+                <span id="page-table"></span>
+
+                <label for="marcs-physic">Marcos en Memoria Fisica</label>
+                <span id="marcs-physic"></span>
+
+                <label for="size-physic-memory">Tamaño de la memoria Fisica</label>
+                <span id="size-physic-memory"></span>
+
+                <label for="size-virtual-memory">Tamaño de la Memoria Virtual</label>
+                <span id="size-virtual-memory"></span>
+
+                <label for="num-page-reference">Numero de Pagina que se hace referencia</label>
+                <span id="num-page-reference"></span>
+
+                <label for="value-displace-virtual">Valor del Desplazamiento en Virtual</label>
+                <span id="value-displace-virtual"></span>
+
+                <label for="bits-physic-memory">Bits para la Memoria Fisica</label>
+                <span id="bits-physic-memory"></span>
+
+            </div>
+            
+        </div>
     </div>
 
 </body>
