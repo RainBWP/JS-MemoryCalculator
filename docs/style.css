@@ -1,10 +1,79 @@
+:root {
+    --color-background: #fff;
+    --color-background-2: #f9f9f9;
+    --color-text:#000;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #1f1f1f;
+        --color-background-2: #000000;
+        --color-text: #e2e2e2;
+    }
+}
+
+
 * {
+    color: var(--color-text);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2 {
+    border-bottom: var(--color-text) 1px solid;
+    margin-bottom: 1em;
+}
+button {
+    width: 100%;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: .5em 0 1em 0;
+}
+input {
+    background: var(--color-background);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+span {
+    padding-right: 2em;
+    text-align: right;
+    background-color: #0000;
+    border-bottom: var(--color-text) 1px solid;
 }
 
 body {
-    background-color: #f0f0f0;
+    background-color: var(--color-background);
+    margin: 10%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.369);
+    background-color: var(--color-backgound-2);
+}
+
+label {
+    font-weight: bold;
+}
+
+.input, .output {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
 }
