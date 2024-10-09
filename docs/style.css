@@ -8,11 +8,15 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --color-background: #1f1f1f;
-        --color-background-2: #000000;
+        --color-background-2: #1d1d1d;
         --color-text: #e2e2e2;
     }
 }
 
+input:hover {
+    border-color: var(--color-text);
+    box-shadow: 0 0 5px var(--color-text);
+}
 
 * {
     color: var(--color-text);
@@ -39,6 +43,7 @@ input {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: monospace, monospace;
 }
 
 span {
@@ -46,6 +51,7 @@ span {
     text-align: right;
     background-color: #0000;
     border-bottom: var(--color-text) 1px solid;
+    font-family: monospace, monospace;
 }
 
 body {
@@ -58,13 +64,14 @@ body {
 }
 
 .container {
+    border-radius: 10px;
     margin-top: 10px;
     width: 100%;
     max-width: 800px;
     padding: 20px;
     border: 1px solid #ccc;
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.369);
-    background-color: var(--color-backgound-2);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.369);
+    background-color: var(--color-background-2);
 }
 
 label {
