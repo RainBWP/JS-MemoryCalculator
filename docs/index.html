@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculador de Memoria</title>
 </head>
 <body>
+    <script src="script.js"></script>
 
     <h1>Calculador de Memoria</h1>
     <p>sample text</p>
+    <a href="https://github.com/RainBWP/JS-MemoryCalculator" target="_blank">Repositorio Github</a>
+    
+    <div class="container">
+        <h2>Usando Direccion Hexadecimal</h2>
+        <form class="input">
+            <label for="virtual">Memoria Virtual</label>
+            <input type="text" id="virtual" name="virtual" pattern="[0-9a-fA-F]+" required>
+            
+            <label for="physic">Memoria Fisica</label>
+            <input type="text" id="physic" name="physic" pattern="[0-9a-fA-F]+" required>
+            
+            <label for="pages">Numero de Paginas</label>
+            <input type="number" id="pages" name="pages" min="0" inputmode="numeric">
+            
+            <label for="bits">Bits de Desplazamiento</label>
+            <input type="number" id="bits" name="bits" min="0" inputmode="numeric" required>
+            
+            <label for="printtype">Imprimir tipo de valor</label>
+            <input type="checkbox" name="printtype" id="printtype" checked>
+        </form>
+
+        <button onclick="calcular_hexa()">Calcular</button>
+
+        <h2>Resultados</h2>
+        <div class="output">
+            <label for="virtualSize">Memoria Virtual Tamaño</label>
+            <span id="virtualSize"></span>
+
+            <label for="physicSize">Memoria Física Tamaño</label>
+            <span id="physicSize"></span>
+
+            <label for="num-pags-virtual">Numero de Paginas</label>
+            <span id="num-pags-virtual"></span>
+
+            <label for="des-pags-virtual">Desplazamiento de Memoria Virtual</label>
+            <span id="des-pags-virtual"></span>
+
+            <label for="num-pags-physic">Numero de Paginas Fisica</label>
+            <span id="num-pags-physic"></span>
+
+            <label for="des-pags-physic">Desplazamiento de Memoria Fisica</label>
+            <span id="des-pags-physic"></span>
+        </div>
+        
+    </div>
 
 </body>
 </html>
