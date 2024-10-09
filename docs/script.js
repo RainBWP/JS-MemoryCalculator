@@ -134,7 +134,7 @@ function get_calculator() {
 
 
     const binary = document.getElementById('binary').value;
-    const decimal = document.getElementById('decimal').value;
+    const decimal = parseInt(document.getElementById('decimal').value);
     const hexadecimal = document.getElementById('hexadecimal').value;
 
     if (binary) {
